@@ -1,0 +1,10 @@
+streamlit==1.60.0
+pandas==3.0.5
+numpy==2.3.5
+scikit-learn==1.9.0
+xgboost==3.3.0
+shap==0.52.0
+matplotlib==3.11.1
+joblib==1.5.3
+pillow==12.3.0
+imbalanced-learn==0.14.2

@@ -1,0 +1,38 @@
+# Virtual environment
+.venv/
+venv/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# macOS
+.DS_Store
+
+# Environment variables / secrets
+.env
+.env.*
+.streamlit/secrets.toml
+
+# Editor/IDE
+.vscode/
+.idea/
+
+# Runtime-generated logs (auto-created by configure_logging() on first
+# write; matches the root project's convention of not committing logs)
+reports/logs/
+
+# IMPORTANT: do NOT exclude the required XGBoost model artifacts.
+# The blanket `*.joblib` rule in the root project's .gitignore is what
+# caused Sprint 6.7.2's deployment-blocking finding — these two files
+# are explicitly re-included here so that mistake is not repeated.
+!models/xgboost/model.joblib
+!models/xgboost/encoder.joblib
+
+# No raw or engineered datasets belong in this deployment package —
+# they are not present in this directory at all (see DEPLOYMENT_MANIFEST.md
+# "Files Intentionally Excluded"), but excluded here too as a safeguard
+# in case anyone copies data/ in by habit during future maintenance.
+data/raw/
+data/processed/

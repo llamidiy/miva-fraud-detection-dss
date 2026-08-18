@@ -1,0 +1,37 @@
+model_name,training_time_seconds,prediction_time_seconds,accuracy,precision,recall,f1_score,roc_auc,confusion_matrix,classification_report,model_save_path,model_dir
+logistic_regression,671.9262,1.1639,0.9830407913721078,0.062110164280066764,0.8606208155812538,0.11585890450243763,0.9901152386042813,"[[1249529, 21352], [229, 1414]]","              precision    recall  f1-score   support
+
+           0       1.00      0.98      0.99   1270881
+           1       0.06      0.86      0.12      1643
+
+    accuracy                           0.98   1272524
+   macro avg       0.53      0.92      0.55   1272524
+weighted avg       1.00      0.98      0.99   1272524
+",/Users/danlamidi/Documents/fraud-detection-dss/models/logistic_regression/model.joblib,/Users/danlamidi/Documents/fraud-detection-dss/models/logistic_regression
+random_forest,2960.3475,11.7891,0.9999905699224533,0.9951426836672739,0.9975654290931223,0.9963525835866262,0.9993835962321543,"[[1270873, 8], [4, 1639]]","              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00   1270881
+           1       1.00      1.00      1.00      1643
+
+    accuracy                           1.00   1272524
+   macro avg       1.00      1.00      1.00   1272524
+weighted avg       1.00      1.00      1.00   1272524
+",/Users/danlamidi/Documents/fraud-detection-dss/models/random_forest/model.joblib,/Users/danlamidi/Documents/fraud-detection-dss/models/random_forest
+xgboost,201.2641,4.6926,0.99998585488368,0.9915305505142166,0.9975654290931223,0.9945388349514563,0.9997778681842928,"[[1270867, 14], [4, 1639]]","              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00   1270881
+           1       0.99      1.00      0.99      1643
+
+    accuracy                           1.00   1272524
+   macro avg       1.00      1.00      1.00   1272524
+weighted avg       1.00      1.00      1.00   1272524
+",/Users/danlamidi/Documents/fraud-detection-dss/models/xgboost/model.joblib,/Users/danlamidi/Documents/fraud-detection-dss/models/xgboost
+isolation_forest,11.4635,21.3919,0.9068834851051926,0.008984099236897839,0.6506390748630554,0.01772347074964147,0.8784965866286929,"[[1152962, 117919], [574, 1069]]","              precision    recall  f1-score   support
+
+           0       1.00      0.91      0.95   1270881
+           1       0.01      0.65      0.02      1643
+
+    accuracy                           0.91   1272524
+   macro avg       0.50      0.78      0.48   1272524
+weighted avg       1.00      0.91      0.95   1272524
+",/Users/danlamidi/Documents/fraud-detection-dss/models/isolation_forest/model.joblib,/Users/danlamidi/Documents/fraud-detection-dss/models/isolation_forest

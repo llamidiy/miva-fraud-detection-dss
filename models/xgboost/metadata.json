@@ -1,0 +1,50 @@
+{
+  "model_name": "xgboost",
+  "algorithm": "XGBClassifier",
+  "training_timestamp": "2026-08-07T09:06:17.176132+00:00",
+  "target_column": "isFraud",
+  "feature_names": [
+    "step",
+    "amount",
+    "oldbalanceOrg",
+    "newbalanceOrig",
+    "oldbalanceDest",
+    "newbalanceDest",
+    "isFlaggedFraud",
+    "balanceDeltaOrig",
+    "balanceDeltaDest",
+    "errorBalanceOrig",
+    "errorBalanceDest",
+    "isOrigZeroBalance",
+    "isDestZeroBalance",
+    "logAmount",
+    "transactionDay",
+    "transactionHour",
+    "type_CASH_IN",
+    "type_CASH_OUT",
+    "type_DEBIT",
+    "type_PAYMENT",
+    "type_TRANSFER"
+  ],
+  "evaluation_metrics": {
+    "accuracy": 0.99998585488368,
+    "precision": 0.9915305505142166,
+    "recall": 0.9975654290931223,
+    "f1_score": 0.9945388349514563,
+    "roc_auc": 0.9997778681842928,
+    "confusion_matrix": [
+      [
+        1270867,
+        14
+      ],
+      [
+        4,
+        1639
+      ]
+    ],
+    "classification_report": "              precision    recall  f1-score   support\n\n           0       1.00      1.00      1.00   1270881\n           1       0.99      1.00      0.99      1643\n\n    accuracy                           1.00   1272524\n   macro avg       1.00      1.00      1.00   1272524\nweighted avg       1.00      1.00      1.00   1272524\n"
+  },
+  "training_time_seconds": 201.2641,
+  "prediction_time_seconds": 4.6926,
+  "random_state": 42
+}

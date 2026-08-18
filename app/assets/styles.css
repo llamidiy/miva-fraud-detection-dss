@@ -1,0 +1,271 @@
+/*
+  Shared stylesheet for the Fraud Detection Decision Support System.
+  This is the ONLY stylesheet in the application — every page and
+  component draws its look from the classes defined here. No page or
+  component should use inline `style=` attributes; add a class here
+  instead.
+*/
+
+:root {
+    --fd-primary: #1e3a5f;
+    --fd-primary-light: #2d5a8c;
+    --fd-accent: #2dd4bf;
+    --fd-success: #1e8e5a;
+    --fd-success-bg: rgba(30, 142, 90, 0.10);
+    --fd-warning: #b8860b;
+    --fd-warning-bg: rgba(184, 134, 11, 0.10);
+    --fd-danger: #c0392b;
+    --fd-danger-bg: rgba(192, 57, 43, 0.10);
+    --fd-info: #2d5a8c;
+    --fd-info-bg: rgba(45, 90, 140, 0.10);
+    --fd-neutral: #6b7280;
+    --fd-neutral-bg: rgba(107, 114, 128, 0.10);
+    --fd-border: rgba(120, 120, 120, 0.22);
+    --fd-muted: #7c8a9a;
+    --fd-radius: 10px;
+    --fd-spacing-xs: 0.35rem;
+    --fd-spacing-sm: 0.6rem;
+    --fd-spacing-md: 1.1rem;
+    --fd-spacing-lg: 1.8rem;
+}
+
+/* ---------- Global typography & spacing ---------- */
+
+html, body, [class*="css"] {
+    font-family: "Source Sans Pro", "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+.block-container {
+    padding-top: 2.2rem;
+    padding-bottom: 3rem;
+    max-width: 1200px;
+}
+
+h1, h2, h3 {
+    letter-spacing: -0.01em;
+}
+
+/* ---------- Page title / section header ---------- */
+
+.page-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--fd-primary);
+    margin-bottom: 0.15rem;
+    line-height: 1.2;
+}
+
+.page-subtitle {
+    font-size: 1.02rem;
+    color: var(--fd-muted);
+    margin-bottom: var(--fd-spacing-sm);
+    font-weight: 400;
+}
+
+.section-header {
+    font-size: 1.28rem;
+    font-weight: 650;
+    color: var(--fd-primary);
+    margin-top: var(--fd-spacing-lg);
+    margin-bottom: var(--fd-spacing-xs);
+}
+
+.phase-badge {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--fd-accent);
+    background: rgba(45, 212, 191, 0.12);
+    border: 1px solid rgba(45, 212, 191, 0.35);
+    border-radius: 999px;
+    padding: 0.18rem 0.7rem;
+    margin-bottom: var(--fd-spacing-sm);
+}
+
+/* ---------- Metric cards ---------- */
+
+.metric-label {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--fd-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    margin-bottom: 0.3rem;
+}
+
+.metric-value {
+    font-size: 1.9rem;
+    font-weight: 700;
+    color: var(--fd-primary);
+    line-height: 1.15;
+}
+
+.metric-value--loading {
+    color: var(--fd-muted);
+    font-style: italic;
+    font-weight: 500;
+    font-size: 1.3rem;
+}
+
+.metric-delta {
+    font-size: 0.85rem;
+    color: var(--fd-muted);
+    margin-top: 0.2rem;
+}
+
+/* ---------- Info boxes ---------- */
+
+.info-box {
+    border-radius: var(--fd-radius);
+    padding: var(--fd-spacing-md);
+    margin: var(--fd-spacing-sm) 0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    border: 1px solid transparent;
+}
+
+.info-box--info {
+    background: var(--fd-info-bg);
+    border-color: rgba(45, 90, 140, 0.28);
+    color: var(--fd-info);
+}
+
+.info-box--success {
+    background: var(--fd-success-bg);
+    border-color: rgba(30, 142, 90, 0.28);
+    color: var(--fd-success);
+}
+
+.info-box--warning {
+    background: var(--fd-warning-bg);
+    border-color: rgba(184, 134, 11, 0.28);
+    color: var(--fd-warning);
+}
+
+.info-box--danger {
+    background: var(--fd-danger-bg);
+    border-color: rgba(192, 57, 43, 0.28);
+    color: var(--fd-danger);
+}
+
+.info-box--neutral {
+    background: var(--fd-neutral-bg);
+    border-color: var(--fd-border);
+    color: var(--fd-neutral);
+}
+
+/* ---------- Status badges ---------- */
+
+.status-badge {
+    display: inline-block;
+    font-size: 0.78rem;
+    font-weight: 650;
+    padding: 0.2rem 0.65rem;
+    border-radius: 999px;
+    border: 1px solid transparent;
+}
+
+.status-badge--success { background: var(--fd-success-bg); color: var(--fd-success); border-color: rgba(30, 142, 90, 0.3); }
+.status-badge--warning { background: var(--fd-warning-bg); color: var(--fd-warning); border-color: rgba(184, 134, 11, 0.3); }
+.status-badge--danger { background: var(--fd-danger-bg); color: var(--fd-danger); border-color: rgba(192, 57, 43, 0.3); }
+.status-badge--info { background: var(--fd-info-bg); color: var(--fd-info); border-color: rgba(45, 90, 140, 0.3); }
+.status-badge--neutral { background: var(--fd-neutral-bg); color: var(--fd-neutral); border-color: var(--fd-border); }
+
+/* ---------- Placeholder cards & chart placeholders ---------- */
+
+.placeholder-card-title {
+    font-size: 1rem;
+    font-weight: 650;
+    color: var(--fd-primary);
+    margin-bottom: 0.3rem;
+}
+
+.placeholder-card-body {
+    color: var(--fd-muted);
+    font-style: italic;
+    font-size: 0.92rem;
+}
+
+.chart-placeholder {
+    border: 1.5px dashed var(--fd-border);
+    border-radius: var(--fd-radius);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    padding: var(--fd-spacing-lg);
+    color: var(--fd-muted);
+    background: rgba(120, 120, 120, 0.03);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.chart-placeholder__icon {
+    font-size: 1.8rem;
+    opacity: 0.6;
+}
+
+.chart-placeholder__label {
+    font-size: 0.92rem;
+    font-style: italic;
+}
+
+.chart-placeholder--sm { min-height: 160px; }
+.chart-placeholder--md { min-height: 280px; }
+.chart-placeholder--lg { min-height: 420px; }
+
+/* ---------- Sidebar branding ---------- */
+
+.sidebar-app-name {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--fd-primary);
+    margin-top: 0.5rem;
+    line-height: 1.25;
+}
+
+.sidebar-app-tagline {
+    font-size: 0.82rem;
+    color: var(--fd-muted);
+    margin-bottom: 0.4rem;
+}
+
+/* ---------- Footer ---------- */
+
+.app-footer {
+    margin-top: 3.5rem;
+    padding-top: var(--fd-spacing-md);
+    border-top: 1px solid var(--fd-border);
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--fd-muted);
+    line-height: 1.8;
+}
+
+.app-footer .divider {
+    margin: 0 0.5rem;
+    opacity: 0.5;
+}
+
+/* ---------- Dark mode adjustments ---------- */
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --fd-primary: #7fb0e5;
+        --fd-primary-light: #a7c9ec;
+        --fd-muted: #9aa7b5;
+        --fd-border: rgba(255, 255, 255, 0.14);
+        --fd-success-bg: rgba(46, 204, 113, 0.14);
+        --fd-warning-bg: rgba(241, 196, 15, 0.14);
+        --fd-danger-bg: rgba(231, 76, 60, 0.14);
+        --fd-info-bg: rgba(127, 176, 229, 0.14);
+        --fd-neutral-bg: rgba(255, 255, 255, 0.06);
+    }
+
+    .chart-placeholder {
+        background: rgba(255, 255, 255, 0.03);
+    }
+}
